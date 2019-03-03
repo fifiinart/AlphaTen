@@ -13,7 +13,7 @@ def is_person(author_id):  # The author_id should be a number in the rewrite bra
   # can run the command
   async def predicate(ctx):
     return ctx.author.id == author_id
-  
+
   # This returns the check of the predicate which is used in the discord.py
   # library to check the command and if it can be run
   return check(predicate)
@@ -23,4 +23,3 @@ def is_person(author_id):  # The author_id should be a number in the rewrite bra
 # a command author is a developer
 async def is_developer(ctx):
   return ctx.author.id in developers
-  
