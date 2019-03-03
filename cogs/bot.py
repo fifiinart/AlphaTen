@@ -10,7 +10,7 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
   # We need this constructor to load the cog into the bot in the main.py file
   def __init__(self, bot):
     self.bot = bot
-  
+
   # # # # # # # # # # # # # # # # # # # # # # # # #
   # Commands
   # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -24,7 +24,7 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
     aliases = ["echo"],
     description = "Echoes what you tell it to.",
     cog_name = "Misc"
-    # pass_context = True <-- you might see some bots use this but for rewrite, you do not 
+    # pass_context = True <-- you might see some bots use this but for rewrite, you do not
     #     need this. context is automatically passed through
   )
   async def say(self, ctx, *, phrase = None):
@@ -32,12 +32,12 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
       await ctx.send(
         "<@{}> wanted to say something but there was nothing to say...".format(ctx.author.id)
       )
-    
+
     else:
       await ctx.send(
         "<@{}> said: ".format(ctx.author.id) + phrase
       )
-  
+
   @command(
     name = "kill",
     aliases = ["stop", "quit"],
@@ -55,7 +55,7 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
       status = discord.Status.offline,
     )
     await self.bot.logout()
-  
+
   @command(
     name = "ping",
     description = "Pings the bot.",
@@ -85,7 +85,7 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
     ).add_field(name = "Misc", value = "**help**: Gives a help page.\n**ping**: Pings the bot.\n**kill**: Kills the bot and logs it out.\n**say**: Echoes what you tell it to.").set_author(name = str(ctx.message.author), icon_url = ctx.author.avatar_url)
     await ctx.send(embed = embed)
 
-  
+
   # # # # # # # # # # # # # # # # # # # # # # # # #
   # Command Check Errors
   # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -104,7 +104,7 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
         description = "Something failed.",
         color = 0xEE0000   # color also has an alias (colour),
         # timestamp = , # This timestamp parameter is a datetime object (datetime.datetime)
-        # url = , # The url of the embed will appear as a link wherever the title is 
+        # url = , # The url of the embed will appear as a link wherever the title is
                   # so if you clicked on the title (in this case "Error"), you will be brought to this url
       ).add_field(
         name = "Field Name",    # This is the text that goes above each field in the rich embed
@@ -129,9 +129,9 @@ class Misc(Cog, name = "Misc"):  # The cog name can go along with the class exte
       )
 
       # The functions return the embed object for easy function stacking like above
-      # For more information on rich embeds, here's the documentation for it 
+      # For more information on rich embeds, here's the documentation for it
       # https://discordpy.readthedocs.io/en/rewrite/api.html#embed
-  
+
 # For each cog, this function is required to load the cog into
 # the bot. if you don't have this, the cog will not be loaded
 def setup(bot):
