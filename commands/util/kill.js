@@ -1,4 +1,6 @@
-const { Command } = require('discord.js-commando');
+const {
+  Command
+} = require('discord.js-commando');
 
 module.exports = class killCommand extends Command {
   constructor(client) {
@@ -14,7 +16,7 @@ module.exports = class killCommand extends Command {
     })
   }
 
-  run( msg ) {
+  run(msg) {
     msg.say(`Bot was killed by ${msg.author.tag}.`)
     console.log(`Alpha Ten was killed by ${msg.author.tag}`);
     msg.command.client.destroy();
