@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const Commando = require('discord.js-commando');
 const path = require('path');
 const sqlite = require('sqlite');
@@ -15,7 +16,8 @@ client.registry.registerDefaults()
   ])
   .registerCommandsIn(path.join(__dirname, "commands"));
 client.on('ready', () => {
-  console.log(`Logged in and ready to be used.. use "${client.commandPrefix}help".`)
+  console.log(`Logged into ${Array.from(client.guilds).length} guilds and ready to be used.. use "${client.commandPrefix}help".`);
+  client.user.setActivity(`${client.commandPrefix}help in ${Array.from(client.guilds).length} guilds`, { type: "LISTENING"})
 });
 client.setProvider(
     sqlite.open(path.join(__dirname, 'settings.sqlite3'))
