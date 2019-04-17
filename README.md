@@ -1,2 +1,11 @@
 # Alpha Ten
-This is a discord bot!
+This is a fun discord bot! This will explain the commands that are usable to...users.
+
+**Utility: `util`**
+- `kill`
+
+**Miscellaneous: `misc`**
+- `say`
+- `greet`
+
+If you have any questions, put it in my [Discord Developer Server](https://discord.gg/JTB4Cq4).
