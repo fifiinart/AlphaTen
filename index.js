@@ -10,7 +10,8 @@ let config = require('./config.js');
 const client = new Commando.CommandoClient({
   owner: config.owner,
   commandPrefix: config.prefix,
-  unknownCommandResponse: false
+  unknownCommandResponse: false,
+  commandEditableDuration: 60
 });
 
 // Command/Default Registry
@@ -23,8 +24,10 @@ client.registry.registerDefaults()
 
 // Events
 client.on('ready', () => {
-  console.log(`Alpha Ten Beta v. ${config.version} is logged into ${Array.from(client.guilds).length} guilds and ready to be used.. use "${client.commandPrefix}help".`);
-  client.user.setActivity(`${client.commandPrefix}help in ${Array.from(client.guilds).length} guilds`, { type: "LISTENING"});
+  console.log(`Alpha Ten v. ${config.version} is logged into ${Array.from(client.guilds).length} guilds and ready to be used.. use "${client.commandPrefix}help".`);
+  client.user.setActivity(`${client.commandPrefix}help in ${Array.from(client.guilds).length} guilds`, {
+    type: "LISTENING"
+  });
 });
 
 // Provider settings
