@@ -2,7 +2,9 @@ const {
   Command
 } = require('discord.js-commando');
 
-const { RichEmbed } = require('discord.js');
+const {
+  RichEmbed
+} = require('discord.js');
 
 const config = require('../../config.js')
 
@@ -28,17 +30,17 @@ class BotInfoCommand extends Command {
     let status;
     switch (clientUser.presence.status) {
       case "online":
-      status = "Online";
-      break;
+        status = "Online";
+        break;
       case "offline":
-      status = "Offline";
-      break;
+        status = "Offline";
+        break;
       case "idle":
-      status = "Idle";
-      break;
+        status = "Idle";
+        break;
       case "dnd":
-      status = "Do Not Disturb";
-      break;
+        status = "Do Not Disturb";
+        break;
     }
     msg.embed(new RichEmbed({
       "title": `${clientUser.username} Info`,
@@ -47,12 +49,15 @@ class BotInfoCommand extends Command {
         "icon_url": clientUser.avatarURL
       },
       "color": config.embedColor,
-      "timestamp": String(Date.now()),
+      "timestamp": Date.now(),
       "thumbnail": {
         "url": clientUser.avatarURL
       },
-      "fields": [
-        {
+      "footer": {
+        text: clientUser.username,
+        icon_url: clientUser.avatarURL
+      },
+      "fields": [{
           name: "General:",
           value: `Tag: ${clientUser.tag}
 
@@ -66,13 +71,13 @@ class BotInfoCommand extends Command {
 
           Version: ${config.version}
 
-          Owner: fifiinart#2490
+          Owners: fifiinart#2490, Fellow Hashbrown#7076
 
           `
         },
         {
           name: "Links:",
-          value: `Invite Link: https://discordapp.com/api/oauth2/authorize?client_id=557375676437757981&permissions=0&scope=bot
+          value: `Invite Link: https://discordapp.com/api/oauth2/authorize?client_id=545025725866967050&permissions=0&scope=bot
 
           Source Code: https://repl.it/@fifiinart/Alpha-Ten-Beta
 
