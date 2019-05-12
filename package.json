@@ -1,6 +1,6 @@
 {
   "name": "alpha-ten",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^11.5.0",

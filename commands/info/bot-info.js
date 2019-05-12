@@ -81,6 +81,8 @@ class BotInfoCommand extends Command {
 
           Source Code: https://repl.it/@fifiinart/Alpha-Ten-Beta
 
+          Github Repo: https://github.com/fifiinart/AlphaTen
+          
           Link to my server: https://discord.gg/JTB4Cq4`
         }
       ]
