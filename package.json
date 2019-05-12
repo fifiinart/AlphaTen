@@ -1,18 +1,12 @@
 {
-  "name": "alpha-ten-beta",
-  "version": "0.1.0",
-  "description": "A discord bot",
+  "name": "alpha-ten",
+  "version": "1.0.7",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^11.5.0",
     "discord.js-commando": "^0.10.0",
-    "requirements": "^0.0.1",
-    "sqlite": "^3.0.2",
-    "dotenv": "latest"
-  },
-  "author": "Fifi Art",
-  "license": "ISC"
+    "sqlite": "latest",
+    "dotenv": "latest",
+    "express": "latest"
+  }
 }
