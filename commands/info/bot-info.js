@@ -79,10 +79,10 @@ class BotInfoCommand extends Command {
           name: "Links:",
           value: `Invite Link: https://discordapp.com/api/oauth2/authorize?client_id=545025725866967050&permissions=0&scope=bot
 
-          Source Code: https://repl.it/@fifiinart/Alpha-Ten-Beta
+          Source Code: https://repl.it/@fifiinart/Alpha-Ten
 
           Github Repo: https://github.com/fifiinart/AlphaTen
-          
+
           Link to my server: https://discord.gg/JTB4Cq4`
         }
       ]
