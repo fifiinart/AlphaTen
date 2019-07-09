@@ -1,10 +1,10 @@
 {
   "name": "alpha-ten",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^11.5.0",
-    "discord.js-commando": "^0.10.0",
+    "discord.js": "latest",
+    "discord.js-commando": "latest",
     "sqlite": "latest",
     "dotenv": "latest",
     "express": "latest"
