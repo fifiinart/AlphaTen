@@ -14,20 +14,26 @@ class SayCommand extends Command {
       description: 'A command that repeats whatever you say.',
       details: "Make me repeat your wordsmaking it look like I'm a parrot",
       examples: ['alpha say Hello World', 'alpha repeat Who Am I?'],
-      clientPermissions: ["MANAGE_MESSAGES"],
+      guildOnly: true,
       args: [{
         key: 'text',
         prompt: 'What do you wish for me to say?',
         type: 'string'
+      }, {
+        key: 'channel',
+        prompt: 'Where do you want to say it?',
+        type: 'channel',
+        default: msg => msg.channel
       }]
     })
 
   }
 
   run(msg, {
-    text
+    text,
+    channel
   }) {
-    msg.say(`<@${msg.author.id}> said: \`${text}\``)
+    channel.send(`${msg.author.toString()} said: \`${text}\``)
   }
 
 }
