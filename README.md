@@ -14,5 +14,5 @@ This is a fun discord bot! This will explain the commands that are usable to...u
 - `bot-info` - gives information on the bot
 - `user-info` - gives information on a user
 
-If you have any questions, put it in my [Discord Developer Server](https://discord.gg/JTB4Cq4).
+If you have any questions, put it in my [Discord Server](https://discord.gg/JTB4Cq4) and get the `Alpha Ten Follower` role from the role-menu.
 Invite the bot [here](https://discordapp.com/api/oauth2/authorize?client_id=545025725866967050&scope=bot).
